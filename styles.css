@@ -3,7 +3,7 @@
     --primary-color: #0066cc;
     --secondary-color: #333;
     --accent-color: #ff6600;
-    --light-bg: #f5f5f5;
+    --light-bg: #E5E4E2;
     --dark-bg: #222;
     --text-color: #333;
     --light-text: #fff;
@@ -295,9 +295,9 @@ nav ul li a {
 }
 
 .partner-logo {
-    max-width: 100%;
+    max-width: 150px;
+    max-height: 60px;
     height: auto;
-    filter: grayscale(100%);
     transition: all 0.3s;
 }
 
