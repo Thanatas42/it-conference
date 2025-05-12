@@ -1,4 +1,3 @@
-/* Общие стили */
 :root {
     --primary-color: #0066cc;
     --secondary-color: #333;
@@ -86,7 +85,6 @@ a:hover {
     color: var(--light-text);
 }
 
-/* Шапка */
 header {
     background-color: var(--light-text);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -100,12 +98,18 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
+    position: relative;
 }
 
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
     color: var(--primary-color);
+    z-index: 1001;
+}
+
+nav {
+    transition: all 0.3s ease;
 }
 
 nav ul {
@@ -119,9 +123,39 @@ nav ul li {
 
 nav ul li a {
     font-weight: 500;
+    padding: 5px 0;
+    position: relative;
 }
 
-/* Герой секция */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
     color: var(--light-text);
@@ -183,7 +217,6 @@ nav ul li a {
     color: var(--accent-color);
 }
 
-/* О конференции */
 .about {
     background-color: var(--light-bg);
 }
@@ -208,7 +241,6 @@ nav ul li a {
     font-weight: normal;
 }
 
-/* Спикеры */
 .speakers {
     text-align: center;
 }
@@ -244,7 +276,6 @@ nav ul li a {
     color: var(--secondary-color);
 }
 
-/* Программа */
 .program {
     background-color: var(--light-bg);
 }
@@ -281,7 +312,6 @@ nav ul li a {
     color: var(--secondary-color);
 }
 
-/* Партнеры */
 .partners {
     text-align: center;
 }
@@ -305,7 +335,6 @@ nav ul li a {
     filter: grayscale(0);
 }
 
-/* Место проведения */
 .location-section {
     background-color: var(--dark-bg);
     color: var(--light-text);
@@ -327,7 +356,6 @@ nav ul li a {
     background-color: #555;
 }
 
-/* Контакты */
 .contacts {
     text-align: center;
 }
@@ -350,7 +378,6 @@ nav ul li a {
     color: var(--primary-color);
 }
 
-/* Подвал */
 footer {
     background-color: var(--dark-bg);
     color: var(--light-text);
@@ -382,7 +409,7 @@ footer {
     margin-bottom: 10px;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .accordion-header {
@@ -418,7 +445,7 @@ footer {
 }
 
 .accordion-item.active .accordion-content {
-    max-height: 1000px; /* Достаточно большое значение для контента */
+    max-height: 1000px;
 }
 
 .speaker-list {
@@ -465,7 +492,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
@@ -499,5 +525,57 @@ footer {
     .contact-cards {
         flex-direction: column;
         align-items: center;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--light-text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(0px at 90% -10%);
+        -webkit-clip-path: circle(0px at 90% -10%);
+        transition: all 0.5s ease-out;
+        pointer-events: none;
+    }
+
+    nav.active {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    .burger.active div:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active div:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 }

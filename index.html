@@ -15,6 +15,12 @@
   <header>
     <div class="container header-container">
       <div class="logo">ИТ-РИТМ</div>
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
       <nav>
         <ul>
           <li><a href="#about">О конференции</a></li>
@@ -28,7 +34,6 @@
     </div>
   </header>
 
-  <!-- Герой секция -->
   <section class="hero">
     <div class="container">
       <video controls width="250" autoplay muted loop id="myVideo">
@@ -42,7 +47,6 @@
     </div>
   </section>
 
-  <!-- О конференции -->
   <section id="about" class="about">
     <div class="container">
       <h2>О КОНФЕРЕНЦИИ</h2>
@@ -73,7 +77,6 @@
     </div>
   </section>
 
-  <!-- Спикеры -->
   <section id="speakers" class="speakers">
     <div class="container">
       <h2>КЛЮЧЕВЫЕ СПИКЕРЫ</h2>
@@ -100,7 +103,6 @@
     </div>
   </section>
 
-  <!-- Программа -->
   <section id="program" class="program">
     <div class="container">
       <h2>ПРОГРАММА КОНФЕРЕНЦИИ</h2>
@@ -330,7 +332,6 @@
     </div>
   </section>
 
-  <!-- Партнеры -->
   <section id="partners" class="partners">
     <div class="container">
       <h2>ПАРТНЕРЫ</h2>
@@ -355,7 +356,6 @@
     </div>
   </section>
 
-  <!-- Место проведения -->
   <section id="location" class="location-section">
     <div class="container location-container">
       <div class="location-info">
@@ -369,13 +369,10 @@
         <p>В случае если вы по каким-либо причинам задерживаетесь, просим вас незамедлительно уведомить об этом
           вашего менеджера</p>
       </div>
-      <div id="map" class="location-map">
-        <!-- Здесь будет карта -->
-      </div>
+      <div id="map" class="location-map"></div>
     </div>
   </section>
 
-  <!-- Контакты -->
   <section id="contacts" class="contacts">
     <div class="container">
       <h2>КОНТАКТЫ ДЛЯ СВЯЗИ</h2>
@@ -396,7 +393,6 @@
     </div>
   </section>
 
-  <!-- Подвал -->
   <footer>
     <div class="container">
       <div class="footer-links">
@@ -468,6 +464,35 @@
 
       myMap.geoObjects.add(hotel);
       myMap.geoObjects.add(deliver);
+    });
+  </script>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      burger.classList.toggle('active');
+
+      document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        burger.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        nav.classList.remove('active');
+        burger.classList.remove('active');
+        document.body.style.overflow = '';
+      }
     });
   </script>
 
