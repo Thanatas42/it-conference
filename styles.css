@@ -8,11 +8,36 @@
     --light-text: #fff;
 }
 
+@font-face {
+    font-family: 'Formular';
+    src: url("./Formular/Formular-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Formular';
+    src: url("./Formular/Formular-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url("./BebasNeue-Regular/BebasNeue-Regular.otf") format("opentype"),
+    url("./BebasNeue-Regular/BebasNeue-Regular.ttf") format("ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Formular', Arial, sans-serif;
 }
 
 body {
