@@ -58,3 +58,46 @@ window.addEventListener('resize', () => {
     document.body.style.overflow = '';
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const swiperContainer = document.querySelector('.speakers-swiper');
+  const slides = swiperContainer.querySelectorAll('.swiper-slide');
+
+  if (slides.length > 3) {
+    new Swiper('.speakers-swiper', {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: false,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        480: {
+          slidesPerView: 1,
+        }
+      }
+    });
+  } else {
+    swiperContainer.classList.remove('swiper');
+    const wrapper = swiperContainer.querySelector('.swiper-wrapper');
+    wrapper.classList.remove('swiper-wrapper');
+    slides.forEach(slide => slide.classList.remove('swiper-slide'));
+
+    wrapper.style.display = 'flex';
+    wrapper.style.flexWrap = 'wrap';
+    wrapper.style.gap = '20px';
+    wrapper.style.justifyContent = 'center';
+  }
+});
+
