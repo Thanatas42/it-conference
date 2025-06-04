@@ -101,6 +101,11 @@ a:hover {
 
 /*header*/
 
+header {
+  background-color: var(--light-back);
+  height: 60px;
+}
+
 .header {
   background-color: var(--light-back);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -139,10 +144,15 @@ a:hover {
 .hero {
   color: var(--light-text);
   text-align: center;
-  padding: 100px 0 100px;
+  padding: 140px 0;
   position: relative;
   overflow: hidden;
-  height: auto;
+  height: calc(100vh - 60px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #myVideo {
@@ -159,11 +169,14 @@ a:hover {
 
 #heroLogo {
   width: 100%;
+  max-width: 1000px;
   height: 15%;
+  margin-bottom: 40px;
 }
 
 #heroDate {
-  width: 30%;
+  max-width: 400px;
+  width: 50%;
   height: 15%;
 }
 
@@ -175,11 +188,11 @@ a:hover {
 .hero h2 {
   font-size: 2rem;
   color: var(--light-text);
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .hero h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 40px;
 }
 
@@ -191,25 +204,6 @@ a:hover {
 }
 
 /*end hero*/
-
-.partners-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto auto;
-  gap: 20px;
-  justify-items: center;
-  align-items: center;
-}
-
-.partner-logo {
-  max-width: 150px;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.partner-logo:hover {
-  transform: scale(1.05);
-}
 
 nav {
   transition: all 0.3s ease;
@@ -430,13 +424,47 @@ nav ul li a:hover::after {
   color: var(--secondary-color);
 }
 
+/*partners*/
 .partners {
   text-align: center;
+  background-color: var(--light-bg);
 }
 
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  justify-items: center;
+  align-items: center;
+}
+
+.partners-grid a {
+  width: 240px;
+  height: 240px;
+}
+
+.partner-logo {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  max-width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.05);
+}
+
+.swiper-button_partners {
+  color: var(--primary-color);
+}
+
+
+/*end partners*/
+
+/*location*/
 .location-section {
   color: var(--light-text);
-
   background-color: var(--primary-color);
   background-image: url('../media/slash.png');
   background-size: contain;
@@ -446,8 +474,7 @@ nav ul li a:hover::after {
 
 .location-container {
   display: flex;
-  align-items: center;
-  gap: 50px;
+  align-items: flex-start;
 }
 
 .location-info {
@@ -455,25 +482,34 @@ nav ul li a:hover::after {
 }
 
 .location-info h2 {
+  padding: 0 5px;
+}
+
+.location-title_first {
   color: var(--light-text);
+  background-color: var(--text-color);
+}
+
+.location-title-last {
+  color: var(--light-text);
+  background-color: var(--secondary-color);
 }
 
 .location-map {
   flex: 1;
   height: 400px;
-  background-color: #555;
 }
 
+/*end location*/
+
+/*footer*/
 .footer {
   background-color: var(--primary-color);
-  color: #fff;
-  padding: 40px 20px;
-  font-family: sans-serif;
-  font-size: 14px;
-
   color: var(--light-text);
   padding: 40px 0;
   text-align: center;
+
+  border-top: 1px solid var(--secondary-color);
 }
 
 .footer__container {
@@ -502,27 +538,55 @@ nav ul li a:hover::after {
 .footer__contacts,
 .footer__note,
 .footer__events {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
   flex: 1 1 250px;
+}
+
+.footer__note {
+  align-items: center;
+}
+
+.footer__events {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer_events_empty {
+  width: 40%;
+}
+
+.footer_events_full {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer_events_full p {
+  align-self: flex-start;
 }
 
 .footer__contacts h4,
 .footer__events h4,
 .footer__note h4 {
   min-height: 35px;
-  margin-bottom: 10px;
+  font-size: 16px;
   font-weight: bold;
+  margin-bottom: 0;
 }
 
 .footer__event {
   align-items: flex-start;
 }
 
-.footer__contacts a,
 .footer__contacts p,
 .footer__events p {
-  color: #fff;
+  color: var(--light-text);
+  font-size: 14px;
   text-decoration: none;
-  margin: 4px 0;
+  margin-bottom: 0;
 }
 
 .footer__note p {
@@ -547,10 +611,7 @@ nav ul li a:hover::after {
   color: var(--light-text);
 }
 
-.copyright {
-  font-size: 0.9rem;
-  color: #aaa;
-}
+/*end footer*/
 
 .accordion {
   margin-top: 20px;
@@ -575,7 +636,7 @@ nav ul li a:hover::after {
 }
 
 .accordion-header:hover {
-  background-color: #0055aa;
+  background-color: var(--secondary-color);
 }
 
 .accordion-header::after {
