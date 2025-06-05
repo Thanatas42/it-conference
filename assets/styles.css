@@ -536,6 +536,7 @@ nav ul li a:hover::after {
 .footer__note p {
   margin: 0;
   line-height: 1.5;
+  text-align: left;
 }
 
 .footer__bottom {
