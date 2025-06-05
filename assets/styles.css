@@ -423,6 +423,7 @@ nav ul li a:hover::after {
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-height: 250px;
 }
 
 .swiper-slide_partners a {

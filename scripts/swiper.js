@@ -37,9 +37,12 @@ const swiper = new Swiper('.speakers-swiper', {
   },
   breakpoints: {
     0: {
-      slidesPerView: 2,
+      slidesPerView: 1,
     },
     480: {
+      slidesPerView: 2,
+    },
+    768: {
       slidesPerView: 3,
     },
   },
