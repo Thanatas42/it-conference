@@ -6,7 +6,9 @@
       <div class="swiper-wrapper">
         {% for speaker in site.data.speaker %}
         <div class="swiper-slide speaker-card">
-          <img src="{{ speaker.src }}" alt="Спикер" />
+          <div class="speaker-image-wrapper">
+            <img src="{{ speaker.src }}" alt="Спикер" />
+          </div>
           <h4>{{ speaker.name }}</h4>
           <p>{{ speaker.details }}</p>
           <p>{{ speaker.company }}</p>
@@ -14,7 +16,10 @@
         {% endfor %}
       </div>
 
-      <div class="swiper-pagination swiper-speaker-pagination"></div>
+      <div class="swiper-button-prev swiper-button_speaker"></div>
+      <div class="swiper-button-next swiper-button_speaker"></div>
+
+      <div class="swiper-pagination swiper-speaker-pagination" style="position: relative; bottom: -45px;"></div>
     </div>
   </div>
 </section>

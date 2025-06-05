@@ -3,9 +3,9 @@
     <h2>УЧАСТНИКИ</h2>
 
     <div class="swiper partners-swiper">
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper swiper-wrapper_partners">
         {% for partner in site.data.partners %}
-        <div class="swiper-slide">
+        <div class="swiper-slide swiper-slide_partners">
           <a href="{{ partner.url }}" target="_blank">
             <img src="{{ partner.logo }}" alt="{{ partner.name }}" class="partner-logo" />
           </a>
@@ -15,7 +15,7 @@
 
       <div class="swiper-button-next swiper-button_partners swiper-partners-next"></div>
       <div class="swiper-button-prev swiper-button_partners swiper-partners-prev"></div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination swiper-partners-pagination" style="position: relative; bottom: -7px;"></div>
     </div>
 
   </div>
