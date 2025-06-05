@@ -1,13 +1,47 @@
 const partnersSwiper = new Swiper('.partners-swiper', {
-  loop: true,
-  slidesPerView: 1,
   spaceBetween: 30,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-partners-next',
+    prevEl: '.swiper-partners-prev',
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
+    },
+    768: {
+      slidesPerView: 3,
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
+    },
   },
 });
+
+const swiper = new Swiper('.speakers-swiper', {
+  spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+    },
+    480: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+  },
+});
+
