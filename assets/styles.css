@@ -412,7 +412,7 @@ nav ul li a:hover::after {
 .speaker-card h4 {
   color: var(--light-text);
   margin: 10px 0 5px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: left;
   -ms-flex-item-align: start;
   align-self: flex-start;
