@@ -4,6 +4,13 @@
 
     <div class="swiper partners-swiper">
       <div class="swiper-wrapper swiper-wrapper_partners">
+        {% assign slide_count = site.data.partners | size %}
+        {% assign rows = 2 %}
+        {% assign per_row = 3 %}
+        {% assign full_count = rows | times: per_row %}
+        {% assign remainder = slide_count | modulo: full_count %}
+        {% assign padding = full_count | minus: remainder %}
+
         {% for partner in site.data.partners %}
         <div class="swiper-slide swiper-slide_partners">
           <a href="{{ partner.url }}" target="_blank">
@@ -11,6 +18,11 @@
           </a>
         </div>
         {% endfor %}
+
+        {% for i in (1..padding) %}
+        <div class="swiper-slide empty-slide"></div>
+        {% endfor %}
+
       </div>
 
       <div class="swiper-button-next swiper-button_partners swiper-partners-next"></div>
