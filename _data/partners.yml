@@ -2,61 +2,49 @@
   url: https://ca.gisca.ru
   logo: ./images/partners_logo/uc_gis_logo.png
 
-- name: ГИС
-  url: https://www.gaz-is.ru
-  logo: ./images/partners_logo/gis_logo.png
+- name: Аквариус
+  url: https://www.aq.ru
+  logo: ./images/partners_logo/aqarius_logo.png
 
 - name: YADRO
   url: https://yadro.com
   logo: ./images/partners_logo/yadro_logo.png
 
-- name: Базальт СПО
-  url: https://www.basealt.ru
-  logo: ./images/partners_logo/Basealt_logo.png
-
-- name: Visiology
-  url: https://ru.visiology.su
-  logo: ./images/partners_logo/visiology.png
-
-- name: Setere Group
-  url: https://www.seteregroup.ru
-  logo: ./images/partners_logo/setere_logo.png
-
-- name: Next
-  url: https://rpanext.ru
-  logo: ./images/partners_logo/next_logo.png
-
-- name: Скала-р
-  url: https://www.skala-r.ru
-  logo: ./images/partners_logo/skalar_logo.png
-
-- name: Киберпротект
-  url: https://cyberprotect.ru
-  logo: ./images/partners_logo/cyber_protect_logo.png
-
-- name: Информатика
-  url: https://informatika37.ru
-  logo: ./images/partners_logo/informatika_logo.png
-
-- name: Аквариус
-  url: https://www.aq.ru
-  logo: ./images/partners_logo/aqarius_logo.png
-
-- name: Fplus
-  url: https://fplustech.ru
-  logo: ./images/partners_logo/fplus_logo.png
+- name: ITD group
+  url: https://www.iitdgroup.ru
+  logo: ./images/partners_logo/itd_group_logo.png
 
 - name: Аладдин Р.Д.
   url: https://www.aladdin-rd.ru
   logo: ./images/partners_logo/aladdin_logo.png
 
-- name: Орион софт
-  url: https://www.orionsoft.ru
-  logo: ./images/partners_logo/orion_soft_logo.png
+- name: Киберпротект
+  url: https://cyberprotect.ru
+  logo: ./images/partners_logo/cyber_protect_logo.png
 
-- name: ITD group
-  url: https://www.iitdgroup.ru
-  logo: ./images/partners_logo/itd_group_logo.png
+- name: Next
+  url: https://rpanext.ru
+  logo: ./images/partners_logo/next_logo.png
+
+- name: Базальт СПО
+  url: https://www.basealt.ru
+  logo: ./images/partners_logo/Basealt_logo.png
+
+- name: Setere Group
+  url: https://www.seteregroup.ru
+  logo: ./images/partners_logo/setere_logo.png
+
+- name: ГИС
+  url: https://www.gaz-is.ru
+  logo: ./images/partners_logo/gis_logo.png
+
+- name: Скала-р
+  url: https://www.skala-r.ru
+  logo: ./images/partners_logo/skalar_logo.png
+
+- name: Fplus
+  url: https://fplustech.ru
+  logo: ./images/partners_logo/fplus_logo.png
 
 - name: RuDesktop
   url: https://rudesktop.ru
@@ -65,3 +53,20 @@
 - name: Primo RPA
   url: https://primo-rpa.ru/
   logo: ./images/partners_logo/primo_logo.png
+
+- name: Информатика
+  url: https://informatika37.ru
+  logo: ./images/partners_logo/informatika_logo.png
+
+- name: Visiology
+  url: https://ru.visiology.su
+  logo: ./images/partners_logo/visiology.png
+
+- name: Графтех
+  url: https://graf-tech.ru/
+  logo: ./images/partners_logo/graftech_logo.png
+
+- name: Орион софт
+  url: https://www.orionsoft.ru
+  logo: ./images/partners_logo/orion_soft_logo.png
+
