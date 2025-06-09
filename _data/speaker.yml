@@ -1,35 +1,14 @@
-- name: Михаил Козловский
-  src: ./images/Person1.jpg
-  details: Заместитель генерального директора
-  company: Кибер
+- name: Владимир Маракшин
+  src: ./images/cyber_marakshin.jpg
+  details: Директор департамента стратегического развития
+  company: Киберпротект
 
-- name: Михаил Козловский
-  src: ./images/govor.jpg
+- name: Козлов Михаил
+  src: ./images/inform_kozlov.jpg
   details: Заместитель генерального директора
-  company: Кибер
+  company: Информатика
 
-- name: Михаил Козловский
-  src: ./images/JHpbiom.jpg
-  details: Заместитель генерального директора
-  company: Кибер
-
-- name: Михаил Козловский
-  src: ./images/Person3.webp
-  details: Заместитель генерального директора
-  company: Кибер
-
-- name: Михаил Козловский
-  src: ./images/Person1.jpg
-  details: Заместитель генерального директора
-  company: Кибер
-
-- name: Михаил Козловский
-  src: ./images/Person1.jpg
-  details: Заместитель генерального директора
-  company: Кибер
-
-- name: Михаил Козловский
-  src: ./images/Person1.jpg
-  details: Заместитель генерального директора
-  company: Кибер
-
+- name: Дыбля Наталья
+  src: ./images/setere_dybla.jpg
+  details: Директор по продуктам
+  company: SETERE Group
