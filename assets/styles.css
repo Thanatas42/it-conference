@@ -360,6 +360,8 @@ nav ul li a:hover::after {
   margin: auto;
   padding: 10px;
   text-align: center;
+  height: 100%;
+  max-height: 410px;
   min-height: 410px;
   display: -webkit-box;
   display: -ms-flexbox;

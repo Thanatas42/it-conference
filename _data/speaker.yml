@@ -3,10 +3,20 @@
   details: Директор департамента стратегического развития
   company: Киберпротект
 
+- name: Илья Кочетов
+  src: ./images/8_Primo RPA.jpg
+  details: Директор по технологическому развитию платформы Primo RPA
+  company: Primo RPA
+
 - name: Козлов Михаил
   src: ./images/inform_kozlov.jpg
   details: Заместитель генерального директора
   company: Информатика
+
+- name: Максим Губин
+  src: ./images/12_visiology.jpg
+  details: Руководитель центра компетенций и экспертизы
+  company: Visiology
 
 - name: Дыбля Наталья
   src: ./images/setere_dybla.jpg
