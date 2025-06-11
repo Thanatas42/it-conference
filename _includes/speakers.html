@@ -9,9 +9,12 @@
           <div class="speaker-image-wrapper">
             <img src="{{ speaker.src }}" alt="Спикер" />
           </div>
-          <h4>{{ speaker.name }}</h4>
-          <p>{{ speaker.details }}</p>
-          <p>{{ speaker.company }}</p>
+
+          <div class="speaker-info">
+            <h4>{{ speaker.name }}</h4>
+            <p>{{ speaker.details }}</p>
+            <p>{{ speaker.company }}</p>
+          </div>
         </div>
         {% endfor %}
       </div>
