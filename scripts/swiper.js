@@ -1,5 +1,5 @@
 const partnersSwiper = new Swiper('.partners-swiper', {
-  loop: false,
+  loop: true,
   spaceBetween: 30,
   pagination: {
     el: '.swiper-pagination',
