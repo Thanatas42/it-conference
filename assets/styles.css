@@ -574,6 +574,8 @@ nav ul li a:hover::after {
 
 .location-info h2 {
   padding: 0 5px;
+  display: block;
+  width: fit-content;
 }
 
 .location-info p {
