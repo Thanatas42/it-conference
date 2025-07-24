@@ -1,24 +1,34 @@
+- name: Михаил Гилязов
+  src: ./images/Skala.jpg
+  details: Директор по работе с заказчиками
+  company: «Скала^р»
+
+- name: Михаил Верисов
+  src: ./images/Next.jpg
+  details: Директор
+  company: Next 
+
+- name: Максим Березин
+  src: ./images/Orion_soft.jpg
+  details: Директор по развитию бизнеса
+  company: Orion soft 
+
 - name: Владимир Маракшин
   src: ./images/cyber_marakshin.jpg
   details: Директор департамента стратегического развития
-  company: Киберпротект
+  company: «Киберпротект»
 
-- name: Илья Кочетов
-  src: ./images/8_Primo RPA.jpg
-  details: Директор по технологическому развитию платформы Primo RPA
-  company: Primo RPA
-
-- name: Козлов Михаил
+- name: Михаил Козлов
   src: ./images/inform_kozlov.jpg
   details: Заместитель генерального директора
-  company: Информатика
+  company: «Информатика»
 
 - name: Максим Губин
   src: ./images/12_visiology.jpg
   details: Руководитель центра компетенций и экспертизы
   company: Visiology
 
-- name: Дыбля Наталья
+- name: Наталья Дыбля
   src: ./images/setere_dybla.jpg
   details: Директор по продуктам
   company: SETERE Group
