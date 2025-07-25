@@ -3,25 +3,55 @@
   details: Директор по работе с заказчиками
   company: «Скала^р»
 
-- name: Михаил Верисов
-  src: ./images/Next.jpg
-  details: Директор
-  company: Next 
+- name: Олег Марин
+  src: ./images/akvarius_marin.jpeg
+  details: Заместитель директора по продуктовому развитию
+  company: «Аквариус»
 
-- name: Максим Березин
-  src: ./images/Orion_soft.jpg
-  details: Директор по развитию бизнеса
-  company: Orion soft 
+- name: Владислав Кудрявцев
+  src: ./images/Fplus_kudrivcev.jpg
+  details: Руководитель отдела технических решений
+  company: Fplus
 
 - name: Владимир Маракшин
   src: ./images/cyber_marakshin.jpg
   details: Директор департамента стратегического развития
   company: «Киберпротект»
 
+- name: Ольга Юринская
+  src: ./images/rudesktop_yurinskay.jpg
+  details: Руководитель отдела продаж
+  company: Rudesktop 
+
 - name: Михаил Козлов
   src: ./images/inform_kozlov.jpg
   details: Заместитель генерального директора
   company: «Информатика»
+
+- name: Артем Виноградов
+  src: ./images/primo_rpa_vinogradov.jpg
+  details: Коммерческий директор
+  company: Primo RPA
+
+- name: Михаил Верисов
+  src: ./images/Next.jpg
+  details: Директор
+  company: ЦТР «Некст»
+
+- name: Антон Михайлов
+  src: ./images/ITD Group_Mihailov.jpg
+  details: Product Owner
+  company: SASTAV
+
+- name: Андрей Зрячих
+  src: ./images/ITD Group_Zrychih.jpg
+  details: Менеджер по развитию бизнеса 
+  company: ITD Group
+
+- name: Максим Березин
+  src: ./images/Orion_soft.jpg
+  details: Директор по развитию бизнеса
+  company: Orion soft
 
 - name: Максим Губин
   src: ./images/12_visiology.jpg
@@ -32,3 +62,14 @@
   src: ./images/setere_dybla.jpg
   details: Директор по продуктам
   company: SETERE Group
+
+- name: Роман Ставцев
+  src: ./images/bazalt_stavcev.jpg
+  details: Руководитель дирекции по проектам
+  company: «Базальт СПО» 
+
+- name: Сергей Кулишов
+  src: ./images/grftech_kuleshov.jpg
+  details: Account Executive
+  company: «ГРАФТЕХ»
+
