@@ -4,7 +4,7 @@ ymaps.ready(initTwo);
 function init() {
   const myMap = new ymaps.Map("map", {
     center: [60.159581, 29.880482],
-    zoom: 12,
+    zoom: 16,
     controls: ["zoomControl"]
   }, {
     suppressMapOpenBlock: true,
@@ -25,46 +25,35 @@ function init() {
 }
 
 function initTwo() {
-  ymaps.ready(function() {
+  ymaps.ready(function () {
     const MapLast = new ymaps.Map("map-last", {
       center: [59.985458, 30.300866],
-      zoom: 16,
+      zoom: 15,
       controls: ["zoomControl"]
-    }, {
-      suppressMapOpenBlock: true,
-      yandexMapAutoSwitch: false,
-      autoFitToViewport: 'always'
     });
 
-    let pointA = [59.985458, 30.300866];
-    let pointB = [59.986092, 30.293266];
+    const pointA = [59.985458, 30.300866];
+    const pointB = [59.986092, 30.293266];
 
-    let multiRoute = new ymaps.multiRouter.MultiRoute({
-      referencePoints: [
-        pointA,
-        pointB
-      ],
+    const multiRoute = new ymaps.multiRouter.MultiRoute({
+      referencePoints: [pointA, pointB],
       params: {
         routingMode: 'pedestrian'
       }
     }, {
-      boundsAutoApply: true,
-      // Добавляем визуальные параметры
-      routeActiveStrokeWidth: 4,
-      routeActiveStrokeStyle: 'solid',
-      routeActiveStrokeColor: '#0088ff',
-      routeStrokeStyle: 'solid',
-      routeStrokeWidth: 3,
-      pinVisible: true,
-      pinActiveFillColor: '#0088ff'
+      boundsAutoApply: true
     });
 
     MapLast.geoObjects.add(multiRoute);
 
-    // Автоматически подгоняем карту под маршрут
-    MapLast.setBounds(multiRoute.getBounds(), {
-      checkZoomRange: true
+    multiRoute.model.events.add('requestsuccess', function () {
+      MapLast.setBounds(multiRoute.getBounds(), { checkZoomRange: true });
     });
+
+    const placemark = new ymaps.Placemark([59.985900, 30.293277], {
+      balloonContent: 'Точка отправления'
+    });
+    MapLast.geoObjects.add(placemark);
+    placemark.balloon.open();
   });
 }
-
